@@ -2,10 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.keymap.set("i", "jk", "<Esc>l")
-[
-  {
-    "key": "tab",
-    "command": "editor.action.inlineSuggest.commit",
-    "when": "textInputFocus && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"     
-  }
-]
+vim.keymap.set("n", "<leader>rn", ":IncRename", {
+  desc = "Incremental Rename",
+})
